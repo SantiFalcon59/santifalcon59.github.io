@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+   <head>
+      <meta charset="utf-8"/>
+      <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+      <title>QueSale - Revisar Evento</title>
+      <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+      <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+      <link href="https://fonts.googleapis.com" rel="preconnect"/>
+      <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+      <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+      <script>
+         tailwind.config = {
+           darkMode: "class",
+           theme: {
+             extend: {
+               colors: {
+                 "primary": "#7f13ec",
+                 "background-light": "#f7f6f8",
+                 "background-dark": "#191022",
+               },
+               fontFamily: {
+                 "display": ["Plus Jakarta Sans", "Noto Sans", "sans-serif"]
+               },
+               borderRadius: {
+                 "DEFAULT": "0.5rem",
+                 "lg": "1rem",
+                 "xl": "1.5rem",
+                 "full": "9999px"
+               },
+             },
+           },
+         }
+      </script>
+   </head>
+
+<!-- HEADER -->
+<header class="sticky top-0 z-20 flex items-center justify-between border-b border-gray-200 bg-white/80 px-10 py-4 backdrop-blur-sm">
+  <div class="flex items-center gap-10">
+     <!-- Logo clickeable -->
+     <a href="index.html" class="flex items-center gap-3 text-[var(--primary-color)]">
+     <img src="../img/logo.jfif" alt="QueSale Logo" class="h-12 w-12 object-cover rounded-full" />
+     </a>
+     <!-- Navegación -->
+     <nav class="hidden md:flex items-center gap-6">
+        <a class="text-[var(--text-primary)] hover:text-[var(--primary-color)] text-sm font-medium transition-colors" href="events.html">Explorar Eventos</a>
+        <a class="text-[var(--text-primary)] hover:text-[var(--primary-color)] text-sm font-medium transition-colors" href="#">Categorías</a>
+        <a class="text-[var(--text-primary)] hover:text-[var(--primary-color)] text-sm font-medium transition-colors" href="#">Crear Evento</a>
+     </nav>
+  </div>
+  <div class="flex items-center gap-4">
+     <!-- Buscador -->
+     <label class="relative hidden sm:block w-full max-w-xs">
+     <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"> search </span>
+     <input class="form-input w-full rounded-full border-gray-200 bg-[var(--secondary-color)] py-2 pl-10 pr-4 text-sm text-[var(--text-primary)] placeholder:text-gray-400 focus:border-[var(--primary-color)] focus:ring-[var(--primary-color)]" placeholder="Buscar eventos..." value=""/>
+     </label>
+     <!-- Notificaciones -->
+     <button aria-label="Notificaciones" class="flex size-10 items-center justify-center rounded-full bg-[var(--secondary-color)] text-gray-600 hover:bg-gray-200 hover:text-black transition-colors">
+     <span class="material-symbols-outlined">notifications</span>
+     </button>
+     <!-- Perfil usuario -->
+     <button aria-label="Perfil de usuario">
+        <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-transparent hover:border-[var(--primary-color)] transition-all" 
+           style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAfuDfnWdETJNZomBcYqZI9mTotf_q2bRDXJ3Xwd-1rs-EqJLDfgOfgv8KnL57AzVOPWyA2_uBW1h4aEt483Sti8nQwecv5yUpImm5kp4JFyehoveBXWvaSsbeZWnP0mBxj4K1J1oc9v5-fFM3t4GCrKDjvRdSVL_pAfzBCaTCyNqrhNZaMnuGrYcWNwEmF0KcGbGx1Ns2BqUQFGnZUefBe-MxDDA50viKELc13RyzKlpouYit6_2TXtgwXHz9cgG9u74LkEO0Xh7FB");'>
+        </div>
+     </button>
+  </div>
+</header>
+
+
+   <body class="bg-background-light dark:bg-background-dark font-display">
+      <div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+         <div class="layout-container flex h-full grow flex-col">
+            <div class="px-4 md:px-20 lg:px-40 flex flex-1 justify-center py-5">
+               <div class="layout-content-container flex flex-col max-w-[960px] flex-1 gap-8">
+                  <div class="flex flex-col gap-3 p-4">
+                     <div class="flex gap-6 justify-between">
+                        <p class="text-gray-800 dark:text-gray-200 text-base font-medium leading-normal">Paso 4 de 4: Revisar y Publicar</p>
+                     </div>
+                     <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2.5">
+                        <div class="bg-primary h-2.5 rounded-full" style="width: 100%"></div>
+                     </div>
+                  </div>
+                  <div class="flex flex-wrap justify-between gap-3 p-4 items-center">
+                     <p class="text-gray-900 dark:text-white text-4xl font-black leading-tight tracking-[-0.033em] min-w-72">Revisá tu Evento</p>
+                  </div>
+                  <div class="flex flex-col gap-8">
+                     <div class="bg-white dark:bg-background-dark rounded-xl shadow-sm border border-gray-200 dark:border-gray-700">
+                        <div class="p-6 border-b border-gray-200 dark:border-gray-700 flex justify-between items-center">
+                           <h2 class="text-2xl font-bold text-gray-900 dark:text-white">Detalles del Evento</h2>
+                           <button class="flex items-center gap-2 text-primary font-semibold text-sm hover:underline">
+                           <span class="material-symbols-outlined text-base">edit</span>
+                           Editar
+                           </button>
+                        </div>
+                        <div class="p-6">
+                           <div class="@container">
+                              <div class="bg-cover bg-center flex flex-col justify-end overflow-hidden @[480px]:rounded-xl min-h-80 mb-6" data-alt="Vibrant abstract illustration for an anime convention with dynamic character silhouettes and bright colors" style='background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 25%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuAjJXBbWn_6mb4PWqT2Wktv0I2_ictaJVTv8AizW5GpkAlgSJK408AjPQ9NplWqF5mEIPmkZipirs2EiKebZQWGexXq7Br0b-_I7liCMPxbDbab-O7eOPh5wJzmbK3Hn_rbOg06IWWO7kiD9cd5xgKWFZt_tDl7-fQ57DZAdybK8d-8yQ0_3DEyhMX7_ea97voe59j9AMuyIvr_G9TDA4si4Yv7ylXaV3RK6BT6kL1iOm0Wa5dP7qXNy4FaWjSIkT3uR3kab5ibd8Qk");'>
+                                 <div class="flex p-4">
+                                    <p class="text-white tracking-light text-[28px] font-bold leading-tight">Convención de Anime 2023</p>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="flex gap-3 p-3 flex-wrap pr-4 mb-4">
+                              <div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-primary/20 pl-4 pr-4">
+                                 <p class="text-primary text-sm font-medium leading-normal">Anime</p>
+                              </div>
+                              <div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-primary/20 pl-4 pr-4">
+                                 <p class="text-primary text-sm font-medium leading-normal">K-Pop</p>
+                              </div>
+                              <div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-xl bg-primary/20 pl-4 pr-4">
+                                 <p class="text-primary text-sm font-medium leading-normal">Gaming</p>
+                              </div>
+                           </div>
+                           <p class="text-gray-700 dark:text-gray-300 text-base font-normal leading-normal pb-3 pt-1 px-4">
+                              Un evento lleno de diversión para todos los entusiastas del anime, K-pop y gaming. Unite a nosotros para un día de actividades emocionantes, invitados especiales y merchandising exclusivo. Tendremos competencias de cosplay, dance covers de K-pop y los últimos torneos de gaming.
+                           </p>
+                        </div>
+                     </div>
+                     <div class="grid md:grid-cols-2 gap-8">
+                        <div class="bg-white dark:bg-background-dark rounded-xl shadow-sm border border-gray-200 dark:border-gray-700">
+                           <div class="p-6 border-b border-gray-200 dark:border-gray-700 flex justify-between items-center">
+                              <h2 class="text-2xl font-bold text-gray-900 dark:text-white">Ubicación y Lugar</h2>
+                              <button class="flex items-center gap-2 text-primary font-semibold text-sm hover:underline">
+                              <span class="material-symbols-outlined text-base">edit</span>
+                              Editar
+                              </button>
+                           </div>
+                           <div class="p-6 space-y-4">
+                              <div>
+                                 <h3 class="font-semibold text-gray-800 dark:text-gray-200">La Rural Predio Ferial</h3>
+                                 <p class="text-gray-600 dark:text-gray-400">Av. Sarmiento 2704, C1425 CABA, Argentina</p>
+                              </div>
+                              <div class="h-48 rounded-lg overflow-hidden">
+                                 <img class="w-full h-full object-cover" data-alt="A stylized map showing the location of the event in Buenos Aires." data-location="Buenos Aires" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVcftiKWgkExu0EK77U4rDhbPP1AyMeIsKpIeI25PB5G0Dppk4MY2hLkfJxSpsi2s4Nl6IaswqU_9jTt6JECi8LR3HXTbi7LkIW_NxcdF8KACPqEFetokg4DCB9-gPrLMOlXqv2QVoRI6hIixddiXXIz5nDqQ1pUMLaAFjTlcY5Nkb7X2Swq5coaq6O742SaDLHSLwSmPv8rqG-KtpOEWmcnxZ-ezIrLntwpZ2skfOMDXwTfXpVUcU30N1N4LhZCxE-FfsOP1vY6KF"/>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="bg-white dark:bg-background-dark rounded-xl shadow-sm border border-gray-200 dark:border-gray-700">
+                           <div class="p-6 border-b border-gray-200 dark:border-gray-700 flex justify-between items-center">
+                              <h2 class="text-2xl font-bold text-gray-900 dark:text-white">Fecha y Horario</h2>
+                              <button class="flex items-center gap-2 text-primary font-semibold text-sm hover:underline">
+                              <span class="material-symbols-outlined text-base">edit</span>
+                              Editar
+                              </button>
+                           </div>
+                           <div class="p-6 space-y-4">
+                              <div class="flex items-center gap-4">
+                                 <span class="material-symbols-outlined text-primary text-2xl">calendar_month</span>
+                                 <div>
+                                    <h3 class="font-semibold text-gray-800 dark:text-gray-200">Fecha de Inicio</h3>
+                                    <p class="text-gray-600 dark:text-gray-400">Sábado, 9 de Diciembre, 2023</p>
+                                 </div>
+                              </div>
+                              <div class="flex items-center gap-4">
+                                 <span class="material-symbols-outlined text-primary text-2xl">schedule</span>
+                                 <div>
+                                    <h3 class="font-semibold text-gray-800 dark:text-gray-200">Hora</h3>
+                                    <p class="text-gray-600 dark:text-gray-400">10:00 AM - 8:00 PM (ART)</p>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="bg-white dark:bg-background-dark rounded-xl shadow-sm border border-gray-200 dark:border-gray-700">
+                        <div class="p-6 border-b border-gray-200 dark:border-gray-700 flex justify-between items-center">
+                           <h2 class="text-2xl font-bold text-gray-900 dark:text-white">Entradas y Precios</h2>
+                           <button class="flex items-center gap-2 text-primary font-semibold text-sm hover:underline">
+                           <span class="material-symbols-outlined text-base">edit</span>
+                           Editar
+                           </button>
+                        </div>
+                        <div class="p-6">
+                           <ul class="space-y-4">
+                              <li class="flex justify-between items-center p-4 bg-background-light dark:bg-background-dark rounded-lg">
+                                 <div>
+                                    <h3 class="font-bold text-gray-800 dark:text-gray-200">Entrada General</h3>
+                                    <p class="text-sm text-gray-600 dark:text-gray-400">Acceso a todas las áreas y actividades.</p>
+                                 </div>
+                                 <p class="font-bold text-lg text-primary">$3500 ARS</p>
+                              </li>
+                              <li class="flex justify-between items-center p-4 bg-background-light dark:bg-background-dark rounded-lg">
+                                 <div>
+                                    <h3 class="font-bold text-gray-800 dark:text-gray-200">Pase VIP</h3>
+                                    <p class="text-sm text-gray-600 dark:text-gray-400">Incluye acceso temprano y bolsa de merchandising exclusiva.</p>
+                                 </div>
+                                 <p class="font-bold text-lg text-primary">$7000 ARS</p>
+                              </li>
+                           </ul>
+                           <div class="mt-6 p-4 bg-primary/10 rounded-lg flex items-center gap-4">
+                              <span class="material-symbols-outlined text-primary text-3xl">groups</span>
+                              <div>
+                                 <h3 class="font-semibold text-gray-800 dark:text-gray-200">Capacidad Total</h3>
+                                 <p class="text-gray-600 dark:text-gray-400">5.000 asistentes</p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="sticky bottom-0 bg-white/80 dark:bg-background-dark/80 backdrop-blur-sm py-4 mt-8">
+                     <div class="flex flex-col sm:flex-row justify-end gap-4 p-4">
+                        <button class="px-6 py-3 rounded-lg text-gray-700 dark:text-gray-300 font-bold bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors">
+                        Guardar Borrador
+                        </button>
+                        <button class="px-8 py-3 rounded-lg text-white font-bold bg-primary hover:bg-primary/90 transition-colors shadow-lg shadow-primary/30" onclick="document.getElementById('confirmation-modal').classList.remove('hidden')">
+                        Publicar Evento
+                        </button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50 hidden" id="confirmation-modal">
+         <div class="bg-white dark:bg-background-dark rounded-xl shadow-2xl max-w-md w-full p-8 text-center space-y-6">
+            <div class="mx-auto flex items-center justify-center h-16 w-16 rounded-full bg-primary/10">
+               <span class="material-symbols-outlined text-4xl text-primary">rocket_launch</span>
+            </div>
+            <h2 class="text-2xl font-bold text-gray-900 dark:text-white">¿Listo para publicar?</h2>
+            <p class="text-gray-600 dark:text-gray-400">
+               Una vez que publiques, tu evento será visible para todos en QueSale. Podrás editar los detalles más tarde.
+            </p>
+            <div class="flex justify-center gap-4">
+               <button class="px-6 py-2 rounded-lg text-gray-700 dark:text-gray-300 font-semibold bg-gray-200 dark:bg-gray-600 hover:bg-gray-300 dark:hover:bg-gray-500" onclick="document.getElementById('confirmation-modal').classList.add('hidden')">Cancelar</button>
+               <button class="px-6 py-2 rounded-lg text-white font-semibold bg-primary hover:bg-primary/90">Publicar Ahora</button>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>

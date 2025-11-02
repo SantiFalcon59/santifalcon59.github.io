@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html class="light" lang="es">
+   <head>
+      <meta charset="utf-8"/>
+      <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+      <title>QueSale - Subir Multimedia</title>
+      <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+      <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+      <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+      <script>
+         tailwind.config = {
+           darkMode: "class",
+           theme: {
+             extend: {
+               colors: {
+                 "primary": "#7f13ec",
+                 "background-light": "#f7f6f8",
+                 "background-dark": "#191022",
+               },
+               fontFamily: {
+                 "display": ["Plus Jakarta Sans", "Noto Sans", "sans-serif"]
+               },
+               borderRadius: {
+                 "DEFAULT": "0.5rem",
+                 "lg": "1rem",
+                 "xl": "1.5rem",
+                 "full": "9999px"
+               },
+             },
+           },
+         }
+      </script>
+      <style>
+         .material-symbols-outlined {
+         font-variation-settings:
+         'FILL' 0,
+         'wght' 400,
+         'GRAD' 0,
+         'opsz' 24
+         }
+      </style>
+   </head>
+
+   <!-- HEADER -->
+   <header class="sticky top-0 z-20 flex items-center justify-between border-b border-gray-200 bg-white/80 px-10 py-4 backdrop-blur-sm">
+    <div class="flex items-center gap-10">
+       <!-- Logo clickeable -->
+       <a href="index.html" class="flex items-center gap-3 text-[var(--primary-color)]">
+       <img src="../img/logo.jfif" alt="QueSale Logo" class="h-12 w-12 object-cover rounded-full" />
+       </a>
+       <!-- Navegación -->
+       <nav class="hidden md:flex items-center gap-6">
+          <a class="text-[var(--text-primary)] hover:text-[var(--primary-color)] text-sm font-medium transition-colors" href="events.html">Explorar Eventos</a>
+          <a class="text-[var(--text-primary)] hover:text-[var(--primary-color)] text-sm font-medium transition-colors" href="#">Categorías</a>
+          <a class="text-[var(--text-primary)] hover:text-[var(--primary-color)] text-sm font-medium transition-colors" href="#">Crear Evento</a>
+       </nav>
+    </div>
+    <div class="flex items-center gap-4">
+       <!-- Buscador -->
+       <label class="relative hidden sm:block w-full max-w-xs">
+       <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"> search </span>
+       <input class="form-input w-full rounded-full border-gray-200 bg-[var(--secondary-color)] py-2 pl-10 pr-4 text-sm text-[var(--text-primary)] placeholder:text-gray-400 focus:border-[var(--primary-color)] focus:ring-[var(--primary-color)]" placeholder="Buscar eventos..." value=""/>
+       </label>
+       <!-- Notificaciones -->
+       <button aria-label="Notificaciones" class="flex size-10 items-center justify-center rounded-full bg-[var(--secondary-color)] text-gray-600 hover:bg-gray-200 hover:text-black transition-colors">
+       <span class="material-symbols-outlined">notifications</span>
+       </button>
+       <!-- Perfil usuario -->
+       <button aria-label="Perfil de usuario">
+          <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-transparent hover:border-[var(--primary-color)] transition-all" 
+             style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAfuDfnWdETJNZomBcYqZI9mTotf_q2bRDXJ3Xwd-1rs-EqJLDfgOfgv8KnL57AzVOPWyA2_uBW1h4aEt483Sti8nQwecv5yUpImm5kp4JFyehoveBXWvaSsbeZWnP0mBxj4K1J1oc9v5-fFM3t4GCrKDjvRdSVL_pAfzBCaTCyNqrhNZaMnuGrYcWNwEmF0KcGbGx1Ns2BqUQFGnZUefBe-MxDDA50viKELc13RyzKlpouYit6_2TXtgwXHz9cgG9u74LkEO0Xh7FB");'>
+          </div>
+       </button>
+    </div>
+ </header>
+
+   <body class="bg-background-light dark:bg-background-dark font-display text-[#141118] dark:text-white">
+
+    <div class="w-full max-w-5xl mx-auto mt-8 px-4">
+      <div class="flex justify-between items-center mb-3">
+        <p class="text-gray-900 dark:text-white text-sm font-medium leading-normal">Paso 2 de 4</p>
+        <p class="text-gray-500 dark:text-gray-400 text-xs">25% completado</p>
+      </div>
+
+      <!-- Barra de progreso -->
+      <div class="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3 overflow-hidden">
+        <div class="bg-primary h-3 rounded-full transition-all duration-500 ease-in-out" style="width: 50%;"></div>
+      </div>
+
+      <!-- Texto de pasos -->
+      <div class="grid grid-cols-4 mt-3 text-xs font-medium text-gray-500 dark:text-gray-400">
+        <span class="text-center opacity-60">Información Básica</span>
+        <span class="text-center text-primary font-semibold">Contenido multimedia</span>
+        <span class="text-center opacity-60">Ubicación y Precio</span>
+        <span class="text-center opacity-60">Publicar</span>
+      </div>
+    </div>
+    
+    
+
+      <div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+         <div class="layout-container flex h-full grow flex-row">
+            <aside class="w-64 bg-white dark:bg-background-dark p-4 border-r border-gray-200 dark:border-gray-700">
+               <div class="flex flex-col gap-8">
+               </div>
+            </aside>
+            <main class="flex-1 p-8">
+               <div class="layout-content-container flex flex-col max-w-full flex-1">
+                  <div class="flex flex-wrap justify-between gap-3 pb-8">
+                     <p class="text-[#141118] dark:text-white text-4xl font-black leading-tight tracking-[-0.033em] min-w-72">Sube Contenido Multimedia para tu Evento</p>
+                  </div>
+                  <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                     <div class="lg:col-span-2 flex flex-col gap-6">
+                        <div class="flex flex-col items-center gap-6 rounded-xl border-2 border-dashed border-[#e0dbe6] dark:border-gray-700 px-6 py-14 bg-white dark:bg-background-dark">
+                           <div class="flex max-w-[480px] flex-col items-center gap-2">
+                              <p class="text-[#141118] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] max-w-[480px] text-center">Arrastra y suelta tus imágenes y videos aquí</p>
+                              <p class="text-[#756189] dark:text-gray-400 text-sm font-normal leading-normal max-w-[480px] text-center">o haz clic para buscar</p>
+                           </div>
+                           <button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90">
+                           <span class="truncate">Buscar Archivos</span>
+                           </button>
+                        </div>
+                        <div>
+                           <h3 class="text-[#141118] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] pb-2 pt-4">Progreso de Carga</h3>
+                           <div class="flex flex-col gap-4 bg-white dark:bg-background-dark p-4 rounded-lg border border-gray-200 dark:border-gray-700">
+                              <div class="flex flex-col gap-3">
+                                 <div class="flex gap-6 justify-between items-center">
+                                    <p class="text-[#141118] dark:text-white text-base font-medium leading-normal">video_promo_evento.mp4</p>
+                                    <p class="text-[#141118] dark:text-white text-sm font-normal leading-normal">60%</p>
+                                 </div>
+                                 <div class="rounded-full bg-[#e0dbe6] dark:bg-gray-700">
+                                    <div class="h-2 rounded-full bg-primary" style="width: 60%;"></div>
+                                 </div>
+                                 <p class="text-[#756189] dark:text-gray-400 text-sm font-normal leading-normal">12.5 MB de 20.8 MB</p>
+                              </div>
+                              <div class="flex flex-col gap-3">
+                                 <div class="flex gap-6 justify-between items-center">
+                                    <p class="text-[#141118] dark:text-white text-base font-medium leading-normal">poster_principal.jpg</p>
+                                    <p class="text-[#141118] dark:text-white text-sm font-normal leading-normal">100%</p>
+                                 </div>
+                                 <div class="rounded-full bg-[#e0dbe6] dark:bg-gray-700">
+                                    <div class="h-2 rounded-full bg-green-500" style="width: 100%;"></div>
+                                 </div>
+                                 <p class="text-[#756189] dark:text-gray-400 text-sm font-normal leading-normal">2.1 MB de 2.1 MB</p>
+                              </div>
+                              <div class="flex flex-col gap-3">
+                                 <div class="flex gap-6 justify-between items-center">
+                                    <p class="text-[#141118] dark:text-white text-base font-medium leading-normal">imagen_galeria_01.png</p>
+                                    <p class="text-red-500 text-sm font-normal leading-normal">Error al subir</p>
+                                 </div>
+                                 <div class="rounded-full bg-[#e0dbe6] dark:bg-gray-700">
+                                    <div class="h-2 rounded-full bg-red-500" style="width: 30%;"></div>
+                                 </div>
+                                 <p class="text-red-500 text-sm font-normal leading-normal">Tipo de archivo incorrecto. Usa JPG, PNG o GIF.</p>
+                              </div>
+                           </div>
+                        </div>
+                        <div>
+                           <h3 class="text-[#141118] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] pb-2 pt-4">Multimedia de tu Evento</h3>
+                           <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                              <div class="relative group">
+                                 <img class="rounded-lg aspect-square object-cover w-full h-full" data-alt="Miniatura del video promocional del evento" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCI0RAkaovZ6usZi6rJQ0rc3KnV_5sZk284Q6qWb1ZCTDHJEZcQkD3jFCBRqHVk1oa9xj6HomRCOFigAxVkFsANs7s_orU1gO-n2rDSjxVUhkPVUoe1TKJOjAcz8BOX5rift1ATcYyCXwG6-wzDA0bWw--euppHZxHs4TsifXqF50HOikcecsmiVqlSb9xCY49lfLTdzsZ28ZPE836rfWx6-hy2iyVR-eoEyLgtabEnIyrk2o-R_P91KmPRFOvSRkmPhindl9FPEm07"/>
+                                 <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center rounded-lg">
+                                    <button class="text-white text-xs bg-primary px-2 py-1 rounded-md">Elegir como Portada</button>
+                                 </div>
+                                 <div class="absolute top-2 right-2 bg-primary text-white text-xs px-2 py-1 rounded-full">Video de Portada</div>
+                              </div>
+                              <div class="relative group">
+                                 <img class="rounded-lg aspect-square object-cover w-full h-full" data-alt="Miniatura del póster del evento" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWv3-jp7RCuxfKtkglGCa9afqWwTWxcyRoD0ZRZhy2KOKoOsaNN0e2ltOUsfXsFIAmHrdUh5UqYF14KcFJ07oDbWJYgj5V1OQy9zY3RDw2ey67d8n2JgIBr1k5quCM5GlNtX5gEZmSh1JWHGXIdh9uBVOBUZoshUTKrxxOv5liNdYhd1jSKvuriSojBLnOhOKuhMJP6CYGoQEgH559weNJfu6rH7ZD03hmZATws6HvZOzhJjGgIrHLCGx9wZbTi3BWWN5uaiA21G9D"/>
+                                 <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center rounded-lg">
+                                    <button class="text-white text-xs bg-primary px-2 py-1 rounded-md">Elegir como Portada</button>
+                                 </div>
+                              </div>
+                              <div class="relative group">
+                                 <img class="rounded-lg aspect-square object-cover w-full h-full" data-alt="Miniatura de imagen de la galería" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrkrkqkSsp7vns7RSW9eQeuHJEjKRo47rxPpPfrhnJp1b9kPJ6f_UShg7qerfoyGpiksju0OGjpBSpcM7W1Il2n8wVeV7VRZBxjbKYxp5L-G0AvlfMoRe3xvmvh0v4mGgE6iD68eaairJVQ8V4Z8mjk3ZpQEQILCf4AblyxsUL9MSlu8MilQtYythYpXjm0Bu0ZMRy1xc3N9mD09VZ_cTdBOjMEgXhYJuT6f1L3AaMyrKQvtDLDuzdFzIDJr1HC8rAcG29dNh6hgHa"/>
+                                 <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center rounded-lg">
+                                    <button class="text-white text-xs bg-primary px-2 py-1 rounded-md">Elegir como Portada</button>
+                                 </div>
+                              </div>
+                              <div class="relative group">
+                                 <img class="rounded-lg aspect-square object-cover w-full h-full" data-alt="Miniatura de imagen de la galería 2" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlPKoR1k_EZnMjbEbx4v_Gr-vsTvyS_ZK4AiIpDur2QPpNZ-fudnen64sCghkXzJC6jdfPcfAFgnmtj6mChNF6VxDz3Vku-hHPCiQB410jBZFl0VWt0NbclFa8FFmg4dREovE9xGsSt9DsAQj3IgPGfcUhMMss4qYPlusOujscfywMIywvy13geBsh022wwtT2g0yLC2ESmm5qOyrwjZCs1u_0a2QdP_ldg4-jEevvmPRtW3JvXGSIzlBpZOA65rJUiSRYwsDPBz2o"/>
+                                 <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center rounded-lg">
+                                    <button class="text-white text-xs bg-primary px-2 py-1 rounded-md">Elegir como Portada</button>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="lg:col-span-1 flex flex-col gap-6">
+                        <div class="bg-white dark:bg-background-dark p-6 rounded-lg border border-gray-200 dark:border-gray-700 flex flex-col gap-4">
+                           <h3 class="text-[#141118] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Branding del Evento</h3>
+                           <div>
+                              <label class="text-[#141118] dark:text-white text-sm font-medium mb-1 block">Banner del Evento</label>
+                              <p class="text-[#756189] dark:text-gray-400 text-xs mb-2">Elige una imagen de banner para la parte superior de la página de tu evento. (1920x480px recomendado)</p>
+                              <div class="flex items-center justify-center w-full">
+                                 <label class="flex flex-col items-center justify-center w-full h-32 border-2 border-gray-300 dark:border-gray-600 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:hover:border-gray-500 dark:hover:bg-gray-600" for="dropzone-file-banner">
+                                    <div class="flex flex-col items-center justify-center pt-5 pb-6">
+                                       <span class="material-symbols-outlined text-gray-500 dark:text-gray-400">cloud_upload</span>
+                                       <p class="mb-2 text-sm text-gray-500 dark:text-gray-400"><span class="font-semibold">Haz clic para subir</span></p>
+                                    </div>
+                                    <input class="hidden" id="dropzone-file-banner" type="file"/>
+                                 </label>
+                              </div>
+                           </div>
+                           <div>
+                              <label class="text-[#141118] dark:text-white text-sm font-medium mb-1 block">Logo del Evento</label>
+                              <p class="text-[#756189] dark:text-gray-400 text-xs mb-2">Un logo cuadrado para mostrar en tarjetas y listas. (512x512px recomendado)</p>
+                              <div class="flex items-center justify-center w-full">
+                                 <label class="flex flex-col items-center justify-center w-full h-32 border-2 border-gray-300 dark:border-gray-600 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:hover:border-gray-500 dark:hover:bg-gray-600" for="dropzone-file-logo">
+                                    <div class="flex flex-col items-center justify-center pt-5 pb-6">
+                                       <span class="material-symbols-outlined text-gray-500 dark:text-gray-400">cloud_upload</span>
+                                       <p class="mb-2 text-sm text-gray-500 dark:text-gray-400"><span class="font-semibold">Haz clic para subir</span></p>
+                                    </div>
+                                    <input class="hidden" id="dropzone-file-logo" type="file"/>
+                                 </label>
+                              </div>
+                           </div>
+                           <a href="create_event_location.html" 
+                           class="flex min-w-[120px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 w-full sm:w-auto">
+                          <span class="truncate">Siguiente: Ubicación y Precio</span>
+                        </a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </main>
+         </div>
+      </div>
+   </body>
+
+   <footer class="bg-gray-900 text-gray-300 mt-16">
+    <div class="mx-auto max-w-screen-2xl px-4 py-12 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 gap-8 md:grid-cols-4">
+  
+        <!-- Logo y descripción -->
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <a href="index.html" class="flex items-center gap-3 text-[var(--primary-color)]">
+              <img src="img/logo.jfif" alt="QueSale Logo" class="h-12 w-12 object-cover rounded-full" />
+            </a>
+            <h2 class="text-xl font-bold text-white tracking-tight">QueSale</h2>
+          </div>
+          <p class="text-sm text-gray-400">La mejor plataforma para descubrir eventos alternativos y conectar con tu comunidad.</p>
+        </div>
+  
+        <!-- Enlaces -->
+        <div>
+          <h3 class="mb-4 text-sm font-semibold uppercase text-gray-400">Explorar</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-white transition-colors">Inicio</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Eventos</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Contacto</a></li>
+          </ul>
+        </div>
+  
+        <!-- Comunidad -->
+        <div>
+          <h3 class="mb-4 text-sm font-semibold uppercase text-gray-400">Comunidad</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="hover:text-white transition-colors">Foro</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Preguntas Frecuentes</a></li>
+            <li><a href="#" class="hover:text-white transition-colors">Blog</a></li>
+          </ul>
+        </div>
+  
+        <!-- Redes sociales -->
+        <div>
+          <h3 class="mb-4 text-sm font-semibold uppercase text-gray-400">Seguinos</h3>
+        <div class="flex gap-3">
+    <a href="#" class="flex items-center justify-center w-10 h-10 rounded-full bg-blue-600/70 text-white hover:bg-blue-600 transition-colors">
+      <i class="fab fa-facebook-f fa-sm"></i>
+    </a>
+    <a href="#" class="flex items-center justify-center w-10 h-10 rounded-full bg-pink-500/70 text-white hover:bg-pink-500 transition-colors">
+      <i class="fab fa-instagram fa-sm"></i>
+    </a>
+    <a href="#" class="flex items-center justify-center w-10 h-10 rounded-full bg-sky-400/70 text-white hover:bg-sky-400 transition-colors">
+      <i class="fab fa-twitter fa-sm"></i>
+    </a>
+    <a href="#" class="flex items-center justify-center w-10 h-10 rounded-full bg-red-600/70 text-white hover:bg-red-600 transition-colors">
+      <i class="fab fa-youtube fa-sm"></i>
+    </a>
+    <a href="#" class="flex items-center justify-center w-10 h-10 rounded-full bg-indigo-600/70 text-white hover:bg-indigo-600 transition-colors">
+      <i class="fab fa-discord fa-sm"></i>
+    </a>
+  </div>
+  
+  
+      </div>
+  
+      <!-- Separador -->
+      <div class="mt-8 border-t border-gray-700 pt-6 text-center text-sm text-gray-500">
+        &copy; 2025 QueSale. Todos los derechos reservados.
+      </div>
+    </div>
+  </footer>
+
+</html>
